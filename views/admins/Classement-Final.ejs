@@ -1,0 +1,56 @@
+<!--
+  /**
+   * @file views/admins/Classement-Final.ejs
+   * @author Nathan HAUDEBAULT
+   */
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuizBox</title>
+  <link rel="icon" type="image/x-icon" href="/images/admins/faviconquizbox.png" />
+  <!-- <p id="message"></p> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="/css/admins/index.css">
+</head>
+
+<body>
+  <section id="scrims-ladder--container" class="scrims-ladder">
+    <div class="ladder-nav">
+      <div class="ladder-nav--col ladder-title">
+        <h1>Classement</h1>
+      </div>
+      <div class="ladder-nav--col">
+        <input type="text" id="search" class="ladder-search" placeholder="Rechercher un joueur">
+      </div>
+    </div>
+    <div class="ladder-nav--results">
+      <div class="ladder-nav--results-col">
+        <label>Position</label>
+      </div>
+      <div class="ladder-nav--results-col">
+        <label>Pseudo</label>
+      </div>
+      <div class="ladder-nav--results-col">
+        <label>Score</label>
+      </div>
+    </div>
+    <div id="scrims-ladder--results"></div>
+  </section>
+  <div class="Illustration">
+    <button id="exporter_resultats" class="bouton-exporter">Exporter</button>
+    <button id="bouton-suivant" class="bouton-retourner-au-lobby">Retourner au lobby</button>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/scripts/adminsJeu.js"></script>
+</body>
+
+</html>

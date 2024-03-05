@@ -1,0 +1,240 @@
+/**
+ * @file public/css/creer_questionnaire/style.css
+ * @author Nathan EPRON & Maël HOCHEDEZ
+ */
+
+ body {
+  background-image: url(/images/admins/bg.png);
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  overflow: scroll;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Standard syntax */
+}
+
+/*Page de creation.html*/
+.btnQ {
+  text-decoration: none;
+  color: white;
+  margin-right: 2vh;
+}
+
+.btnQ:hover {
+  color: #1b39c0;
+}
+
+
+/* Button dropdown */
+.dropdown {
+  position: absolute;
+  top: 48%;
+  right: 0%;
+  border: none;
+  border-radius: 10px;
+
+}
+
+/* Button dropdown */
+.btn2 {
+  background-color: rgb(0, 140, 255);
+  color: white;
+  transition: 0.2s ease;
+  padding: 10px;
+  margin-right: 30px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn2:hover {
+  background-color: #1b39c0;
+}
+
+/* Button dropdown */
+.dropdown-menu {
+  background-color: white;
+  width: 100px;
+  right: auto;
+}
+
+/* Button dropdown */
+.dropdown-item:hover {
+  background-color: rgb(0, 140, 255);
+  /* remplacer "couleur" avec la couleur souhaitée */
+}
+
+
+.Haut-Page {
+  position: absolute;
+  /*left: 0;*/
+  height: 120px;
+  width: 98%;
+  margin-left: 1%;
+  min-height: 100px;
+  background-color: rgb(0, 140, 255);
+  box-shadow: 0px 10px 0px rgb(0, 104, 189);
+  opacity: 90%;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  top: 10px;
+}
+
+.menu1 {
+  width: 100%;
+}
+
+.img-menu {
+  height: 80px;
+  user-select: none;
+  left: 50%;
+  margin-right: 1vh;
+}
+
+
+
+
+
+#questionnaire {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+label {
+  margin-bottom: 6px;
+}
+
+input {
+  margin-bottom: 5px;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+input[type="button"] {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type="button"]:hover {
+  background-color: #EBCA13;
+}
+
+input[type="text"] {
+  width: 65%;
+}
+
+input[id="questionnaire_titre"] {
+  width: 100%;
+}
+
+input[id="questionnaire_description"] {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  height: 40px;
+  line-height: 50px;
+  padding: 0 1rem;
+  padding-left: 3rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
+  top: 20px;
+  /*left: 10%;*/
+
+}
+
+button {
+  margin-bottom: 5px;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #EBCA13;
+}
+
+select {
+  margin-bottom: 5px;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+select[type="button"] {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+select[type="button"]:hover {
+  background-color: #EBCA13;
+}
+
+input#chrono {
+  width: 5%;
+}
+
+.img_titre {
+  width: 50%;
+  height: auto;
+}
+
+.img_question {
+  width: 50%;
+  height: auto;
+}

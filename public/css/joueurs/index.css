@@ -1,0 +1,678 @@
+/**
+ * @file public/css/joueurs/index.css
+ * @author Nathan EPRON
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "bouba";
+  src: url("./Bouba_Round_W03_Black.otf");
+}
+
+body {
+  background-image: url(/images/joueurs/bg.png);
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #052D6E;
+}
+
+#numQuestion {
+  background-color: white;
+  height: 35px;
+  width: 130px;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 20px;
+  color: #fff;
+}
+
+.Logo-Quizbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.Img-Logo-Quizbox {
+  margin-top: 15vh;
+  /* pour positionner l'élément à 10% de la hauteur */
+  height: 150px;
+  width: 600px;
+  max-width: 100%;
+}
+
+.Code-jeu {
+  border-radius: 20px;
+  width: 350px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: inline-block;
+}
+
+input[type="text"] {
+  text-align: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #EBCA13;
+}
+
+.Code-pin-p {
+  font-size: 36px;
+  margin-bottom: 0px;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-code {
+  width: 200px;
+  height: 50px;
+  font-size: 36px;
+  padding: 10px;
+  border: 2px solid #333;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(3px 3px 3px black);
+  filter: drop-shadow(3px 3px 3px black);
+}
+
+
+#login-link {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 78px);
+}
+
+.Login-CC {
+  color: white;
+  font-size: 0.7em;
+}
+
+p.Login-CC {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+a.Login-CC {
+  white-space: nowrap;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  /* on le colle en bas */
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* pop up pin invalide */
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  padding: 1em;
+  border-radius: 10px;
+  display: none;
+  color: white;
+  opacity: 0;
+  animation: shake 0.5s, fadeInOut 1.5s ease-out;
+}
+
+/* Page Salle d'attente */
+/* Loader gif */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+img {
+  height: 125px;
+}
+
+.PseudoStyle {
+  color: #333;
+  font-size: x-large;
+  font-weight: bolder;
+  font-family: "bouba", sans-serif;
+  margin-left: 5vh;
+}
+
+#PseudoJoueur {
+  font-family: "bouba", sans-serif;
+}
+
+/* error code pin */
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-48%, -52%) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-52%, -50%) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(-48%, -48%) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(-50%, -52%) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-52%, -50%) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-50%, -52%) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(-48%, -50%) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-50%, -48%) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(-52%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-1deg);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* error Input Nom */
+.pop-up {
+  position: fixed;
+  top: 4.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+  background-color: #ff2424;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.pop-up.show {
+  opacity: 1;
+}
+
+.pop-up img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.pop-up.show img {
+  animation: fadein 0.5s ease-in-out forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.pop-up.hide {
+  animation: fadeout 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Page Jeu User */
+.Game-user {
+  overflow: hidden;
+  background-image: url(/images/joueurs/bg.png);
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.text-Score-Block {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+.Head-Jeu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  min-height: 50px;
+  background-color: white;
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Quiz-Head-Question {
+  position: absolute;
+  opacity: 1;
+  border-radius: 25px;
+  left: 2%;
+  top: 25%;
+  font-weight: 800;
+  font-size: 18px;
+  font-family: "bouba", sans-serif;
+}
+
+/* Quiz en tete */
+.Quiz-Head {
+  background-color: rgb(182, 182, 182);
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  opacity: 1;
+  border-radius: 25px;
+  display: flex;
+}
+
+.QuizIco {
+  margin-top: 1px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 28x;
+  height: 28px;
+}
+
+.txt-Quiz {
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+/* Milieu de page */
+.Body-Button {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+}
+
+.Logo-Carre-Game,
+.Logo-Rond-Game,
+.Logo-Triangle-Game,
+.Logo-Losange-Game {
+  opacity: 0.2;
+  -webkit-touch-callout: none;
+  /* Empêche la sélection sur iOS */
+  -webkit-user-select: none;
+  /* Empêche la sélection sur iOS */
+  -khtml-user-select: none;
+  /* Empêche la sélection sur Konqueror */
+  -moz-user-select: none;
+  /* Empêche la sélection sur Firefox */
+  -ms-user-select: none;
+  /* Empêche la sélection sur Internet Explorer */
+  user-select: none;
+  /* Empêche la sélection sur les autres navigateurs */
+}
+
+.Logo-Triangle-Game {
+  transform: scale(0.7);
+  /* réduit la taille de l'image de moitié */
+}
+
+.Logo-Losange-Game {
+  transform: scale(0.8);
+  /* réduit la taille de l'image de moitié */
+}
+
+/* Bas de page */
+.Footer-Jeu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100%;
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 0;
+  /* on le colle en bas */
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Score-Block {
+  position: absolute;
+  right: 3%;
+  width: 100px;
+  height: 40px;
+  background-color: rgba(30, 30, 30, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  border-radius: 4px;
+}
+
+/* All BTN */
+.red-button,
+.blue-button,
+.green-button,
+.orange-button {
+  height: auto;
+  min-height: 100px;
+  border-radius: 25px;
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .1s;
+  -webkit-transition: all .1s;
+}
+
+.red-button {
+  background-color: red;
+  box-shadow: 0px 8px 0px rgb(194, 5, 5);
+}
+
+.red-button:active {
+  box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.blue-button {
+  background-color: rgb(0, 140, 255);
+  box-shadow: 0px 8px 0px rgb(20, 109, 160);
+}
+
+.blue-button:active {
+  box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.green-button {
+  background-color: green;
+  box-shadow: 0px 8px 0px rgb(5, 98, 5);
+  margin-bottom: 20px;
+}
+
+.green-button:active {
+  box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.orange-button {
+  background-color: orange;
+  box-shadow: 0px 8px 0px rgb(211, 140, 8);
+  margin-bottom: 20px;
+}
+
+.orange-button:active {
+  box-shadow: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+/* Page Score / Résultat */
+/* Img Resultat */
+.Body-Rep-Resultat {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.txt-Vrai,
+.txt-Faux,
+.txt-NoRep {
+  margin-top: 40px;
+  font-size: 17px;
+  color: white;
+}
+
+/* CSS pour téléphone */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+
+  input[type="text"],
+  input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+  }
+
+  .Code-jeu {
+    height: 150px;
+  }
+
+  .red-button,
+  .blue-button,
+  .green-button,
+  .orange-button {
+    height: 34.5vh;
+  }
+
+  .Body-Button {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* container */
+.container-Leaderboard {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* leaderboard */
+.leaderboard {
+  background: linear-gradient(to bottom, #3a404d, #181c26);
+}
+
+/* head */
+.leaderboard .head {
+  padding: 20px 16px;
+  color: snow;
+  font-size: 20px;
+  text-align: center;
+}
+
+.leaderboard .head h1 {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+/* body */
+.leaderboard .body {
+  color: snow;
+  font-size: 16px;
+}
+
+.leaderboard ol {
+  counter-reset: number;
+}
+
+.leaderboard li {
+  padding: 16px;
+  display: flex;
+}
+
+.leaderboard li mark {
+  flex-grow: 1;
+  color: snow;
+  background-color: transparent;
+}
+
+.leaderboard li:before {
+  counter-increment: number;
+  content: counter(number) ".";
+  margin-right: 4px;
+}
+
+.leaderboard li:nth-child(1) {
+  background: #55a2fa;
+}
+
+.leaderboard li:nth-child(2) {
+  background: #4f82e0;
+}
+
+.leaderboard li:nth-child(3) {
+  background: #4d72d7;
+}
+
+.leaderboard li:nth-child(4) {
+  background: #4b58cd;
+}
+
+.leaderboard li:nth-child(5) {
+  background: #3d45ad;
+}
+
+.bouton-suivant {
+  padding: 10px 20px;
+  margin: 30px;
+  border: none;
+  font-size: 20px;
+  background-color: rgb(0, 140, 255);
+  box-shadow: 0px 8px 0px rgb(0, 104, 189);
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  bottom: 45%;
+  right: 0%;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bouton-suivant:hover {
+  transform: scale(1.1);
+}

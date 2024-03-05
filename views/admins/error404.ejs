@@ -1,0 +1,64 @@
+<!--
+  /**
+   * @file views/admins/error404.ejs
+   * @author Nathan EPRON
+   */
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="/images/admins/faviconquizbox.png" />
+  <meta charset="UTF-8">
+  <title>QuizBox</title>
+  <link rel="stylesheet" type="text/css" href="/css/admins/index.css">
+
+
+</head>
+
+<body>
+  <div class="Milieu-Page-error-div">
+    <img class="spaceerror-img" src="/images/admins/spaceerror.png">
+  </div>
+  <div class="btn-Page-error-div">
+    <a class="btn-Revenir-QZB">Revenir sur QuizBox</a>
+  </div>
+  <script>
+    function resizeErrorImg() {
+      const errorImg = document.querySelector('.spaceerror-img');
+      const errorDiv = document.querySelector('.Milieu-Page-error-div');
+      const errorDivHeight = errorDiv.offsetHeight;
+      const errorDivWidth = errorDiv.offsetWidth;
+
+      // Calculer la nouvelle largeur et hauteur de l'image en fonction de la taille de la div parente
+      let newWidth = errorImg.naturalWidth;
+      let newHeight = errorImg.naturalHeight;
+      const widthRatio = errorImg.naturalWidth / errorDivWidth;
+      const heightRatio = errorImg.naturalHeight / errorDivHeight;
+      if (widthRatio > heightRatio) {
+        newWidth = errorDivWidth;
+        newHeight = errorImg.naturalHeight / widthRatio;
+      } else {
+        newHeight = errorDivHeight;
+        newWidth = errorImg.naturalWidth / heightRatio;
+      }
+
+      // Appliquer la nouvelle taille à l'image
+      errorImg.style.width = `${newWidth}px`;
+      errorImg.style.height = `${newHeight}px`;
+    }
+
+    resizeErrorImg();
+
+    window.addEventListener('resize', function () {
+      resizeErrorImg();
+    });
+
+    document.querySelector('.btn-Revenir-QZB').addEventListener('click', () => {
+      history.back();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!--
+  /**
+   * @file views/joueurs/Loading-Room.ejs
+   * @author Nathan EPRON
+   */
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>QuizBox</title>
+  <!-- CSS de Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet2"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- JavaScript de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/joueurs/index.css">
+  <link rel="shortcut icon" type="image/png" href="/images/joueurs/faviconquizbox.png">
+</head>
+
+<body>
+  <!-- Le reste du contenu -->
+  <div id="container">
+    <div class="Head-Jeu">
+      <p class="Quiz-Head-Question">
+      </p>
+      <div class="Quiz-Head">
+        <img class="QuizIco" src="/images/joueurs/faviconquizbox.png">
+        <p class="txt-Quiz">Quiz</p>
+      </div>
+    </div>
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <div class="d-flex align-items-center">
+        <div class="loader">
+          <img src="/images/joueurs/loading.gif" alt="Loading">
+        </div>
+      </div>
+    </div>
+    <div id="text" class="text-center"
+      style="margin-top: 70px; position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);"></div>
+    <footer class="Footer-Jeu">
+      <div class="PseudoDiv">
+        <p class="PseudoStyle"><span id="PseudoJoueur"></span></p>
+      </div>
+      <div class="Score-Block">
+        <p class="text-Score-Block">0</p>
+      </div>
+    </footer>
+  </div>
+  <script src="/js/joueurs/RecupNomJoueur.js"></script>
+  <script src="/js/joueurs/LoadingRoomTxtAnimation.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/scripts/joueursLobby.js"></script>
+</body>
+
+</html>

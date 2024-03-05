@@ -1,0 +1,85 @@
+<!--
+  /**
+   * @file views/admins/modifier-compte-prof.ejs
+   * @author Nathan EPRON
+   */
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuizBox</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="/images/admins/faviconquizbox.png" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="/css/admins/index.css">
+</head>
+
+<body class="Page-Creation">
+  <div class="Haut-Page">
+    <div class="menu1">
+      <img src="/images/admins/quizboxlogo.png" alt="QuizBox Logo" class="img-menu">
+      <a class="btnQ" href="/accueil">Accueil</a>
+      <!--Bouton Créer questionnaire  -->
+      <a class="btnQ" href="/questionnaire/creer">Créer votre quiz</a>
+      <a class="btnQ" href="/bibliotheque">Bibliothèque</a>
+    </div>
+    <!-- Bouton Profil -->
+    <a class="btn2 btn-secondary dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+      aria-expanded="false">Profil</a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="/mes_quiz">Mes quiz</a></li>
+      <li><a class="dropdown-item" href="/creer_compte">Crée un compte</a></li>
+      <li><a id="modifier" class="dropdown-item" href="/">Modifier le profil</a></li>
+      <li><a id="deconnexion" class="dropdown-item" href="/">Déconnexion</a></li>
+    </ul>
+  </div>
+
+  <div class="modifier-profil">
+    <div class="info-profil">
+      <img src="/images/admins/profil-homme.png" alt="Profil Logo" class="img-profil">
+      <div class="Profil-Prenom-Nom">
+        <p class="Name-Profil"><%- admin.nom %></p>
+      </div>
+      <p><%- admin.email %></p>
+    </div>
+    <div class="separation-profil"></div>
+    <div class="info-profil-modif-mdp-info">
+      <div class="info-prenom-style-div">
+        <span id="nom">Nom : <%- admin.nom %> </span>
+        <p style="margin-left: 130px;">Date de création : <%- admin.date %></p>
+      </div>
+      <span id="email">Email : <%- admin.email %></span>
+      <div class="row">
+        <div id="modifier_infos" class="btn-info-modif-style col">
+          <button class="modifier">Modifier les informations</button>
+        </div>
+        <div id="modifier_mdp" class="btn-info-modif-style col">
+          <button class="modifier">Modifier mot de passe</button>
+        </div>
+      </div>
+      <div id="modifier_mdp_champs"></div>
+      <br>
+      <button id="Supprimer-compte" class="bouton-Supprimer-Compte">Supprimer le compte</button>
+      <div id="confirmation-dialogue" class="confirmation-dialogue">
+        <h2 class="confirmation-dialogue-titre">Confirmation</h2>
+        <p class="confirmation-dialogue-message">Êtes-vous sûr de vouloir supprimer ce compte ?</p>
+        <div class="bouton-dialogue">
+          <button class="confirmation-dialogue-annuler">Annuler</button>
+          <button class="confirmation-dialogue-ok">Confirmer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-bar"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/scripts/modifier_infos.js"></script>
+</body>
+
+</html>
