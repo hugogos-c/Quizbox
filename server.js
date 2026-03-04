@@ -13,7 +13,6 @@ const router = require('./router'); // Chargement du fichier 'router.js' qui con
 require('./databaseConnection');
 
 // Constantes
-const host = 'localhost';
 const port = process.env.PORT || 3000;
 
 // Autorisation d'accès au dossier 'public'
@@ -538,10 +537,7 @@ setTimeout(() => {
   require('./controllers/initialization')();
 
   //* Lance le serveur
-  http.listen({
-    host: host,
-    port: port
-  }, () => {
+  http.listen(port, () => {
     console.log(`Server running at http://${host}:${port}/`);
   }).on('error', (err) => {
     // Gère les erreurs lors du lancemant du serveur
